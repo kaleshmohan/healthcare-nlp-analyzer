@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  healthcare-api:
+    image: mcr.microsoft.com/azure-cognitive-services/textanalytics/healthcare:latest
+    container_name: healthcare-nlp
+    ports:
+      - "5000:5000"
+    environment:
+      - eula=accept
+      - billing=${AZURE_ENDPOINT}
+      - apikey=${AZURE_API_KEY}
+      - rai_terms=accept
+
+  backend:
+    build: ./backend
+    container_name: fastapi-backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - healthcare-api
+
+  frontend:
+    image: python:3.11-slim
+    container_name: streamlit-ui
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    command: /bin/sh -c "pip install --no-cache-dir streamlit requests && streamlit run streamlit_app.py --server.port 8501 --server.address 0.0.0.0"
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
